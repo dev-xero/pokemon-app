@@ -46,7 +46,8 @@ fun PokemonApp(
 	Scaffold {
 		padding ->
 		LazyColumn(
-			modifier = Modifier.padding(padding)
+			modifier = Modifier.padding(padding),
+			verticalArrangement = Arrangement.spacedBy(8.dp)
 		) {
 			items(PokemonData().pokemonData) {
 				pokemon -> PokemonItem(pokemon = pokemon)
@@ -68,7 +69,7 @@ fun PokemonItem(
 	Card(
 		modifier = modifier
 			.fillMaxWidth()
-			.padding(18.dp),
+			.padding(horizontal = 12.dp),
 		elevation = 0.dp
 	) {
 		var expanded by remember { mutableStateOf(false) }

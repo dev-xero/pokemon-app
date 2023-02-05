@@ -2,7 +2,10 @@ package dev.xero.pokemon.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
+val black = Color(0xFF000000)
+val surface = Color(0xFF0B0B0C)
+val white = Color(0xFFFFFFFF)
+val inactive = Color(0xFFA8B9C2)
+val accent_1 = Color(0xFFFF5252)
+val accent_2 = Color(0xFFFF7474)
+val accent_3 = Color(0xFFFFADAD)

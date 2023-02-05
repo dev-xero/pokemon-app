@@ -18,7 +18,19 @@ class PokemonData {
 			defensePower = 25,
 			type = listOf("Grass", "Poison"),
 			weaknesses = listOf("Fire", "Ice", "Psychic")
-		)
+		),
+
+		Pokemon(
+			number = 2,
+			imageResID = R.drawable.ivysaur,
+			nameResID = R.string.ivysaur,
+			descriptionResID = R.string.ivysaur_description,
+			healthPower = 25,
+			attackPower = 25,
+			defensePower = 30,
+			type = listOf("Grass", "Poison"),
+			weaknesses = listOf("Fire", "Ice", "Psychic")
+		),
 
 	)
 }
