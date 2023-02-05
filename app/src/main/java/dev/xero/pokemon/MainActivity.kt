@@ -178,7 +178,7 @@ fun PokemonItem(
 			Column(
 				modifier = Modifier
 					.fillMaxWidth()
-					.padding(top = 8.dp)
+					.padding(top = 16.dp)
 			) {
 				Text(
 					text = stringResource(id = R.string.weaknesses),
@@ -214,6 +214,9 @@ fun TypeBox(
 			modifier = modifier
 				.padding(end = 4.dp)
 				.background(color = MapOfTypeToColor().mapOfTypeToColor[type]!!)
+				.defaultMinSize(minWidth = 50.dp),
+			horizontalArrangement = Arrangement.Center,
+			verticalAlignment = Alignment.CenterVertically
 		) {
 			Text(
 				text = type,
