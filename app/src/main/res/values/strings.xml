@@ -6,10 +6,11 @@
     <string name="thirty_days">30 days</string>
     <string name="type">TYPE</string>
     <string name="weaknesses">WEAKNESSES</string>
+    <string name="stats_percentage">%d\%%</string>
     <string name="stats">STATS</string>
-    <string name="hp">Health Power</string>
-    <string name="ap">Attack Power</string>
-    <string name="df">Defense Power</string>
+    <string name="hp">HP</string>
+    <string name="ap">AP</string>
+    <string name="df">DF</string>
 
 
     <!-- POKEMON NAMES -->

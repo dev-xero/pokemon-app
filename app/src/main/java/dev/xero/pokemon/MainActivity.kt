@@ -193,8 +193,72 @@ fun PokemonStats(
 				.padding(bottom = 16.dp)
 		)
 
-		ProgressUI(UI = "HP", pokemon = pokemon)
+		Column(
+			verticalArrangement = Arrangement.spacedBy(4.dp)
+		) {
+			// HP Progress Bar
+			Row(
+				horizontalArrangement = Arrangement.spacedBy(8.dp),
+				verticalAlignment = Alignment.CenterVertically,
+				modifier = Modifier
+					.fillMaxWidth()
+			) {
+				Text(
+					text = stringResource(id = R.string.hp),
+					style = MaterialTheme.typography.h5,
+					color = inactive
+				)
+				Text(
+					text = stringResource(id = R.string.stats_percentage, pokemon.healthPower),
+					style = MaterialTheme.typography.h5,
+					color = accent_1
+				)
+				ProgressUI(UI = "HP", pokemon = pokemon)
+			}
+
+			// AP Progress Bar
+			Row(
+				horizontalArrangement = Arrangement.spacedBy(8.dp),
+				verticalAlignment = Alignment.CenterVertically,
+				modifier = Modifier
+					.fillMaxWidth()
+			) {
+				Text(
+					text = stringResource(id = R.string.ap),
+					style = MaterialTheme.typography.h5,
+					color = inactive
+				)
+				Text(
+					text = stringResource(id = R.string.stats_percentage, pokemon.attackPower),
+					style = MaterialTheme.typography.h5,
+					color = accent_1
+				)
+				ProgressUI(UI = "AP", pokemon = pokemon)
+			}
+
+			// DF Progress Bar
+			Row(
+				horizontalArrangement = Arrangement.spacedBy(8.dp),
+				verticalAlignment = Alignment.CenterVertically,
+				modifier = Modifier
+					.fillMaxWidth()
+			) {
+				Text(
+					text = stringResource(id = R.string.df),
+					style = MaterialTheme.typography.h5,
+					color = inactive
+				)
+				Text(
+					text = stringResource(id = R.string.stats_percentage, pokemon.defensePower),
+					style = MaterialTheme.typography.h5,
+					color = accent_3
+				)
+				ProgressUI(UI = "DF", pokemon = pokemon)
+			}
+		}
+
 	}
+
 }
 
 @Composable
@@ -227,7 +291,6 @@ private fun ProgressUI(
 		progress = progressAnimation,
 		modifier = Modifier
 			.fillMaxWidth()
-			.padding(vertical = 4.dp)
 	)
 }
 
