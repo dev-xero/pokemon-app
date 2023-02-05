@@ -4,6 +4,8 @@
     <string name="title_first">30 Gen I Pokémons —</string>
     <string name="title_second">That you need to know</string>
     <string name="thirty_days">30 days</string>
+    <string name="type">TYPE</string>
+    <string name="weaknesses">WEAKNESSES</string>
     <string name="hp">Health Power</string>
     <string name="ap">Attack Power</string>
     <string name="df">Defense Power</string>

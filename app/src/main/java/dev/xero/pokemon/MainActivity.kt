@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -17,14 +18,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import dev.xero.pokemon.data.PokemonData
+import dev.xero.pokemon.models.MapOfTypeToColor
 import dev.xero.pokemon.models.Pokemon
-import dev.xero.pokemon.ui.theme.PokemonTheme
-import dev.xero.pokemon.ui.theme.accent_1
-import dev.xero.pokemon.ui.theme.white
+import dev.xero.pokemon.ui.theme.*
 
 class MainActivity : ComponentActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,7 +82,12 @@ fun PokemonItem(
 		Column(
 			modifier = Modifier
 				.fillMaxWidth()
-				.padding(16.dp)
+				.padding(
+					top = 16.dp,
+					start = 16.dp,
+					end = 16.dp,
+					bottom = 32.dp
+				)
 		) {
 			// POKEMON NUMBER
 			Text(
@@ -146,9 +154,83 @@ fun PokemonItem(
 					modifier = Modifier.padding(bottom = 8.dp)
 				)
 			}
+
+			// POKEMON TYPE
+			Column(
+				modifier = Modifier
+					.fillMaxWidth()
+			) {
+				Text(
+					text = stringResource(id = R.string.type),
+					style = MaterialTheme.typography.h5,
+					color = white
+				)
+
+				Row(
+					modifier = Modifier
+						.padding(top = 6.dp)
+				) {
+					TypeBox(types = pokemon.type)
+				}
+			}
+
+			// POKEMON WEAKNESSES
+			Column(
+				modifier = Modifier
+					.fillMaxWidth()
+					.padding(top = 8.dp)
+			) {
+				Text(
+					text = stringResource(id = R.string.weaknesses),
+					style = MaterialTheme.typography.h5,
+					color = white
+				)
+
+				Row(
+					modifier = Modifier
+						.padding(top = 6.dp)
+				) {
+					TypeBox(types = pokemon.weaknesses)
+				}
+			}
 		}
 	}
 
+}
+
+/**
+ * Composable that displays the type of a Pokemon in a box
+ * @param modifier [[Modifier]] Modifier for this composable
+ * @param types [[List]] of types for this Pokemon
+ * */
+@Composable
+fun TypeBox(
+	modifier: Modifier = Modifier,
+	types: List<String>
+) {
+	types.forEach {
+		type ->
+		Row(
+			modifier = modifier
+				.padding(end = 4.dp)
+				.background(color = MapOfTypeToColor().mapOfTypeToColor[type]!!)
+		) {
+			Text(
+				text = type,
+				color = black,
+				modifier = Modifier
+					.padding(
+						horizontal = 8.dp,
+						vertical = 2.dp
+					),
+				style = TextStyle(
+					fontWeight = FontWeight.Bold,
+					fontSize = 12.sp,
+					fontFamily = Outfit
+				)
+			)
+		}
+	}
 }
 
 /**
