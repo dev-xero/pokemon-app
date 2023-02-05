@@ -373,7 +373,7 @@ fun TypeBox(
 			verticalAlignment = Alignment.CenterVertically
 		) {
 			Text(
-				text = type,
+				text = type.uppercase(),
 				color = black,
 				modifier = Modifier
 					.padding(
