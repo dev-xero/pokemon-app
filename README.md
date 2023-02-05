@@ -4,9 +4,9 @@ learn about a new Gen I Pokemon each day for over 30 days!
 
 ## App
 <div style="display: flex">
-  <img src="https://user-images.githubusercontent.com/70282966/216827183-2ea27002-93f2-4086-b363-d43f44c177b4.png" width="320px" />
-  <img src="https://user-images.githubusercontent.com/70282966/216827068-16aa0469-5baa-4bde-9f8e-28bad8e8e818.png" width="320px" />
-  <img src="https://user-images.githubusercontent.com/70282966/216827075-580882b2-b8d2-41de-a75d-d3892ecb9820.png" width="320px" />
+  <img src="https://user-images.githubusercontent.com/70282966/216827183-2ea27002-93f2-4086-b363-d43f44c177b4.png" width="220px" />
+  <img src="https://user-images.githubusercontent.com/70282966/216827068-16aa0469-5baa-4bde-9f8e-28bad8e8e818.png" width="220px" />
+  <img src="https://user-images.githubusercontent.com/70282966/216827075-580882b2-b8d2-41de-a75d-d3892ecb9820.png" width="220px" />
 </div>
 
 ## 📝 Disclaimer
