@@ -25,6 +25,6 @@ data class Pokemon (
 	val healthPower: Int,
 	val attackPower: Int,
 	val defensePower: Int,
-	val type: List<MapOfTypeToColor>,
-	val weaknesses: List<MapOfTypeToColor>,
+	val type: List<String>,
+	val weaknesses: List<String>,
 )
