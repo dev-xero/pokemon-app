@@ -139,10 +139,12 @@ fun PokemonItem(
 						}
 					) {
 						val icon = if (!expanded) R.drawable.up_arrow else R.drawable.down_arrow
+						val tint = if (!expanded) inactive else accent_2
 						Icon(
 							painter = painterResource(id = icon),
 							contentDescription = null,
-							modifier = modifier.size(12.dp)
+							modifier = modifier.size(12.dp),
+							tint = tint
 						)
 					}
 				}
