@@ -133,7 +133,7 @@ fun PokemonItem(
 							}
 						}
 					) {
-						val icon = if (expanded) R.drawable.up_arrow else R.drawable.down_arrow
+						val icon = if (!expanded) R.drawable.up_arrow else R.drawable.down_arrow
 						Icon(
 							painter = painterResource(id = icon),
 							contentDescription = null,
@@ -159,6 +159,12 @@ fun PokemonItem(
 
 }
 
+
+/**
+ * Composable to show the type and weaknesses of each Pokemon
+ * @param modifier [[Modifier]] Modifier for this composable
+ * @param pokemon [[Pokemon]] Data Source for this Pokemon
+ * */
 @Composable
 fun PokemonExtraInfo(
 	modifier: Modifier = Modifier,
