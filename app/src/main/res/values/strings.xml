@@ -11,6 +11,7 @@
     <string name="hp">HP</string>
     <string name="ap">AP</string>
     <string name="df">DF</string>
+    <string name="single_digit">0%d</string>
 
 
     <!-- POKEMON NAMES -->

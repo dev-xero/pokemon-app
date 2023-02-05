@@ -10,10 +10,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -47,14 +49,73 @@ class MainActivity : ComponentActivity() {
 fun PokemonApp(
 	modifier: Modifier = Modifier
 ) {
-	Scaffold {
+	Scaffold(
+		topBar = { AppBar() }
+	) {
 		padding ->
 		LazyColumn(
 			modifier = Modifier.padding(padding),
 			verticalArrangement = Arrangement.spacedBy(12.dp)
 		) {
 			items(PokemonData().pokemonData) {
-				pokemon -> PokemonItem(pokemon = pokemon)
+					pokemon -> PokemonItem(pokemon = pokemon)
+			}
+		}
+	}
+}
+
+/**
+ * Composable for the app bar
+ * @param modifier [[Modifier]] Modifier for this composable
+ * */
+@Composable
+fun AppBar(
+	modifier: Modifier = Modifier
+) {
+	Card(
+		backgroundColor = black,
+		modifier = Modifier.clip(
+			shape = RoundedCornerShape(0.dp)
+		)
+	) {
+		Column {
+			Row(
+				modifier = modifier
+					.fillMaxWidth()
+					.padding(12.dp),
+				horizontalArrangement = Arrangement.SpaceBetween,
+				verticalAlignment = Alignment.CenterVertically
+			) {
+				Image(
+					painter = painterResource(id = R.drawable.app_bar_icon),
+					contentDescription = null,
+					modifier = modifier.width(160.dp)
+				)
+
+				Text(
+					text = stringResource(id = R.string.thirty_days),
+					style = MaterialTheme.typography.h3,
+					color = white
+				)
+			}
+			
+			Column(
+				modifier = Modifier.padding(
+					horizontal = 12.dp,
+					vertical = 32.dp
+				)
+			) {
+				Text(
+					text = stringResource(id = R.string.title_first),
+					style = MaterialTheme.typography.h4,
+					color = inactive
+				)
+
+				Text(
+					text = stringResource(id = R.string.title_second),
+					style = MaterialTheme.typography.h2,
+					color = white
+				)
 			}
 		}
 	}
