@@ -49,7 +49,7 @@ fun PokemonApp(
 		padding ->
 		LazyColumn(
 			modifier = Modifier.padding(padding),
-			verticalArrangement = Arrangement.spacedBy(8.dp)
+			verticalArrangement = Arrangement.spacedBy(12.dp)
 		) {
 			items(PokemonData().pokemonData) {
 				pokemon -> PokemonItem(pokemon = pokemon)
@@ -135,7 +135,8 @@ fun PokemonItem(
 					text = stringResource(id = pokemon.descriptionResID),
 					style = MaterialTheme.typography.body1,
 					maxLines = 2,
-					overflow = TextOverflow.Ellipsis
+					overflow = TextOverflow.Ellipsis,
+					modifier = Modifier.padding(bottom = 8.dp)
 				)
 			}
 		}
