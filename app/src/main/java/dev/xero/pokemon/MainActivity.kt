@@ -150,9 +150,14 @@ fun PokemonItem(
 					)
 				)
 		) {
+			val numberText = when {
+				pokemon.number < 10 -> stringResource(id = R.string.single_digit, pokemon.number)
+				else -> pokemon.number.toString()
+			}
+			
 			// POKEMON NUMBER
 			Text(
-				text = pokemon.number.toString(),
+				text = numberText,
 				style = MaterialTheme.typography.h1,
 				color = accent_1
 			)
