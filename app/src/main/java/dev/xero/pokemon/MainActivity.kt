@@ -23,6 +23,8 @@ import androidx.compose.ui.unit.dp
 import dev.xero.pokemon.data.PokemonData
 import dev.xero.pokemon.models.Pokemon
 import dev.xero.pokemon.ui.theme.PokemonTheme
+import dev.xero.pokemon.ui.theme.accent_1
+import dev.xero.pokemon.ui.theme.white
 
 class MainActivity : ComponentActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,11 +77,15 @@ fun PokemonItem(
 		var expanded by remember { mutableStateOf(false) }
 
 		Column(
-			modifier = Modifier.fillMaxWidth()
+			modifier = Modifier
+				.fillMaxWidth()
+				.padding(16.dp)
 		) {
 			// POKEMON NUMBER
 			Text(
 				text = pokemon.number.toString(),
+				style = MaterialTheme.typography.h1,
+				color = accent_1
 			)
 
 			// POKEMON IMAGE
@@ -96,7 +102,10 @@ fun PokemonItem(
 			}
 
 			// POKEMON DESCRIPTION
-			Column {
+			Column(
+				modifier = Modifier
+					.padding(top = 8.dp)
+			) {
 				Row(
 					modifier = Modifier
 						.fillMaxWidth(),
@@ -105,8 +114,10 @@ fun PokemonItem(
 				) {
 					Text(
 						text = stringResource(id = pokemon.nameResID),
-						maxLines = 1,
-						overflow = TextOverflow.Ellipsis
+						style = MaterialTheme.typography.h2,
+						maxLines = if (expanded) 4 else 1,
+						overflow = TextOverflow.Ellipsis,
+						color = white
 					)
 
 					IconButton(
@@ -122,6 +133,7 @@ fun PokemonItem(
 				}
 				Text(
 					text = stringResource(id = pokemon.descriptionResID),
+					style = MaterialTheme.typography.body1,
 					maxLines = 2,
 					overflow = TextOverflow.Ellipsis
 				)
