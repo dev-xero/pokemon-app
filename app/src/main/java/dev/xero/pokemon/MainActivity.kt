@@ -3,19 +3,18 @@ package dev.xero.pokemon
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -83,6 +82,12 @@ fun PokemonItem(
 			modifier = Modifier
 				.fillMaxWidth()
 				.padding(16.dp)
+				.animateContentSize(
+					animationSpec = spring(
+						dampingRatio = Spring.DampingRatioLowBouncy,
+						stiffness = Spring.StiffnessLow
+					)
+				)
 		) {
 			// POKEMON NUMBER
 			Text(
@@ -151,6 +156,9 @@ fun PokemonItem(
 			}
 
 			if (expanded) {
+				// POKEMON STATS
+				PokemonStats(pokemon = pokemon)
+				
 				// POKEMON EXTRA INFO
 				PokemonExtraInfo(pokemon = pokemon)
 			}
@@ -159,6 +167,69 @@ fun PokemonItem(
 
 }
 
+/**
+ * Composable to show the stats of each Pokemon
+ * @param modifier [[Modifier]] Modifier for this composable
+ * @param pokemon [[Pokemon]] Data Source for this Pokemon
+ * */
+@Composable
+fun PokemonStats(
+	modifier: Modifier = Modifier,
+	pokemon: Pokemon
+) {
+	Column(
+		modifier = modifier
+			.fillMaxWidth()
+			.padding(
+				top = 18.dp,
+				bottom = 8.dp,
+			)
+	) {
+		Text(
+			text = stringResource(id = R.string.stats),
+			style = MaterialTheme.typography.h3,
+			color = white,
+			modifier = Modifier
+				.padding(bottom = 16.dp)
+		)
+
+		ProgressUI(UI = "HP", pokemon = pokemon)
+	}
+}
+
+@Composable
+private fun ProgressUI(
+	modifier: Modifier = Modifier,
+	UI: String,
+	pokemon: Pokemon
+) {
+	val barColor = when (UI) {
+		"HP" -> accent_1
+		"AP" -> accent_2
+		else -> accent_3
+	}
+
+	val progressNum = when(UI) {
+		"HP" -> pokemon.healthPower.toFloat() / 100
+		"AP" -> pokemon.attackPower.toFloat() / 100
+		else -> pokemon.defensePower.toFloat() / 100
+	}
+
+	val progressAnimation by animateFloatAsState(
+		targetValue = progressNum,
+		animationSpec = tween(900),
+		visibilityThreshold = 0.001f
+	)
+
+	LinearProgressIndicator(
+		color = barColor,
+		backgroundColor = Color(0xFF151518),
+		progress = progressAnimation,
+		modifier = Modifier
+			.fillMaxWidth()
+			.padding(vertical = 4.dp)
+	)
+}
 
 /**
  * Composable to show the type and weaknesses of each Pokemon
@@ -214,6 +285,7 @@ fun PokemonExtraInfo(
 		}
 	}
 }
+
 
 /**
  * Composable that displays the type of a Pokemon in a box
