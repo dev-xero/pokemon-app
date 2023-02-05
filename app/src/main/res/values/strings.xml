@@ -1,3 +1,65 @@
 <resources>
     <string name="app_name">Pokemon</string>
+    <!-- APP STRINGS RES -->
+    <string name="title_first">30 Gen I Pokémons —</string>
+    <string name="title_second">That you need to know</string>
+    <string name="thirty_days">30 days</string>
+    <string name="hp">Health Power</string>
+    <string name="ap">Attack Power</string>
+    <string name="df">Defense Power</string>
+
+
+    <!-- POKEMON NAMES -->
+    <string name="bulbasaur">Bulbasaur</string>
+    <string name="ivysaur">Ivysaur</string>
+    <string name="venusaur">Venusaur</string>
+    <string name="charmander">Charmander</string>
+    <string name="charmeleon">Charmeleon</string>
+    <string name="charizard">Charizard</string>
+    <string name="squirtle">Squirtle</string>
+    <string name="wartortle">Wartortle</string>
+    <string name="blastoise">Blastoise</string>
+    <string name="caterpie">Caterpie</string>
+
+    <!-- POKEMON DESCRIPTIONS -->
+    <string name="bulbasaur_description">
+        There is a plant seed on its back right from the day this
+        Pokémon is born. The seed slowly grows larger.
+    </string>
+    <string name="ivysaur_description">
+        When the bulb on its back grows large, it appears to lose
+        the ability to stand on its hind legs.
+    </string>
+    <string name="venusaur_description">
+        Its plant blooms when it is absorbing solar energy.
+        It stays on the move to seek sunlight.
+    </string>
+    <string name="charmander_description">
+        It has a preference for hot things. When it rains,
+        steam is said to spout from the tip of its tail.
+    </string>
+    <string name="charmeleon_description">
+        It has a barbaric nature. In battle, it whips its fiery
+        tail around and slashes away with sharp claws.
+    </string>
+    <string name="charizard_description">
+        It spits fire that is hot enough to melt boulders.
+        It may cause forest fires by blowing flames.
+    </string>
+    <string name="squirtle_description">
+        When it retracts its long neck into its shell,
+        it squirts out water with vigorous force.
+    </string>
+    <string name="wartortle_description">
+        t is recognized as a symbol of longevity. If
+        its shell has algae on it, that Wartortle is very old.
+    </string>
+    <string name="blastoise_description">
+        It crushes its foe under its heavy body to cause fainting.
+        In a pinch, it will withdraw inside its shell.
+    </string>
+    <string name="caterpie_description">
+        For protection, it releases a horrible stench
+        from the antenna on its head to drive away enemies.
+    </string>
 </resources>
