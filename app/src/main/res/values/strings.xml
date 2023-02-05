@@ -25,6 +25,8 @@
     <string name="wartortle">Wartortle</string>
     <string name="blastoise">Blastoise</string>
     <string name="caterpie">Caterpie</string>
+    <string name="metapod">Metapod</string>
+    <string name="butterfree">Butterfree</string>
 
     <!-- POKEMON DESCRIPTIONS -->
     <string name="bulbasaur_description">
@@ -66,5 +68,12 @@
     <string name="caterpie_description">
         For protection, it releases a horrible stench
         from the antenna on its head to drive away enemies.
+    </string>
+    <string name="metapod_description">
+        It is waiting for the moment to evolve. At this stage,
+        it can only harden, so it remains motionless to avoid attack.
+    </string>
+    <string name="butterfree_description">
+        In battle, it flaps its wings at great speed to release highly toxic dust into the air.
     </string>
 </resources>

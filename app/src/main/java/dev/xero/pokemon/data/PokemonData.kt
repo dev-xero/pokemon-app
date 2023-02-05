@@ -128,5 +128,29 @@ class PokemonData {
 			weaknesses = listOf("Fire", "Rock")
 		),
 
+		Pokemon(
+			number = 11,
+			imageResID = R.drawable.metapod,
+			nameResID = R.string.metapod,
+			descriptionResID = R.string.metapod_description,
+			healthPower = 20,
+			attackPower = 15,
+			defensePower = 25,
+			type = listOf("Bug"),
+			weaknesses = listOf("Fire", "Rock")
+		),
+
+		Pokemon(
+			number = 12,
+			imageResID = R.drawable.butterfree,
+			nameResID = R.string.butterfree,
+			descriptionResID = R.string.butterfree_description,
+			healthPower = 25,
+			attackPower = 20,
+			defensePower = 20,
+			type = listOf("Bug"),
+			weaknesses = listOf("Fire", "Rock", "Electric")
+		),
+
 	)
 }
