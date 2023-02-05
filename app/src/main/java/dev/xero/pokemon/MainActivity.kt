@@ -82,12 +82,7 @@ fun PokemonItem(
 		Column(
 			modifier = Modifier
 				.fillMaxWidth()
-				.padding(
-					top = 16.dp,
-					start = 16.dp,
-					end = 16.dp,
-					bottom = 32.dp
-				)
+				.padding(16.dp)
 		) {
 			// POKEMON NUMBER
 			Text(
@@ -155,47 +150,63 @@ fun PokemonItem(
 				)
 			}
 
-			// POKEMON TYPE
-			Column(
-				modifier = Modifier
-					.fillMaxWidth()
-			) {
-				Text(
-					text = stringResource(id = R.string.type),
-					style = MaterialTheme.typography.h5,
-					color = white
-				)
-
-				Row(
-					modifier = Modifier
-						.padding(top = 6.dp)
-				) {
-					TypeBox(types = pokemon.type)
-				}
-			}
-
-			// POKEMON WEAKNESSES
-			Column(
-				modifier = Modifier
-					.fillMaxWidth()
-					.padding(top = 16.dp)
-			) {
-				Text(
-					text = stringResource(id = R.string.weaknesses),
-					style = MaterialTheme.typography.h5,
-					color = white
-				)
-
-				Row(
-					modifier = Modifier
-						.padding(top = 6.dp)
-				) {
-					TypeBox(types = pokemon.weaknesses)
-				}
+			if (expanded) {
+				// POKEMON EXTRA INFO
+				PokemonExtraInfo(pokemon = pokemon)
 			}
 		}
 	}
 
+}
+
+@Composable
+fun PokemonExtraInfo(
+	modifier: Modifier = Modifier,
+	pokemon: Pokemon
+) {
+	Column(
+		modifier = modifier
+			.padding(vertical = 8.dp)
+	) {
+		// POKEMON TYPE
+		Column(
+			modifier = Modifier
+				.fillMaxWidth()
+		) {
+			Text(
+				text = stringResource(id = R.string.type),
+				style = MaterialTheme.typography.h5,
+				color = white
+			)
+
+			Row(
+				modifier = Modifier
+					.padding(top = 6.dp)
+			) {
+				TypeBox(types = pokemon.type)
+			}
+		}
+
+		// POKEMON WEAKNESSES
+		Column(
+			modifier = Modifier
+				.fillMaxWidth()
+				.padding(top = 16.dp)
+		) {
+			Text(
+				text = stringResource(id = R.string.weaknesses),
+				style = MaterialTheme.typography.h5,
+				color = white
+			)
+
+			Row(
+				modifier = Modifier
+					.padding(top = 6.dp)
+			) {
+				TypeBox(types = pokemon.weaknesses)
+			}
+		}
+	}
 }
 
 /**
