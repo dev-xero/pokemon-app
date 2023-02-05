@@ -106,6 +106,7 @@ fun PokemonItem(
 				modifier = Modifier
 					.padding(top = 8.dp)
 			) {
+				var lineHeight by remember { mutableStateOf(2) }
 				Row(
 					modifier = Modifier
 						.fillMaxWidth(),
@@ -115,13 +116,19 @@ fun PokemonItem(
 					Text(
 						text = stringResource(id = pokemon.nameResID),
 						style = MaterialTheme.typography.h2,
-						maxLines = if (expanded) 4 else 1,
+						maxLines = 1,
 						overflow = TextOverflow.Ellipsis,
 						color = white
 					)
 
 					IconButton(
-						onClick = { /*TODO*/ }
+						onClick = {
+							expanded = !expanded
+							lineHeight = when {
+								expanded -> 5
+								else -> 2
+							}
+						}
 					) {
 						val icon = if (expanded) R.drawable.up_arrow else R.drawable.down_arrow
 						Icon(
@@ -134,7 +141,7 @@ fun PokemonItem(
 				Text(
 					text = stringResource(id = pokemon.descriptionResID),
 					style = MaterialTheme.typography.body1,
-					maxLines = 2,
+					maxLines = lineHeight,
 					overflow = TextOverflow.Ellipsis,
 					modifier = Modifier.padding(bottom = 8.dp)
 				)

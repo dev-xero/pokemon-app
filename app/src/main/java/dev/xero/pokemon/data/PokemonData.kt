@@ -32,5 +32,17 @@ class PokemonData {
 			weaknesses = listOf("Fire", "Ice", "Psychic")
 		),
 
+		Pokemon(
+			number = 3,
+			imageResID = R.drawable.venusaur,
+			nameResID = R.string.venusaur,
+			descriptionResID = R.string.venusaur_description,
+			healthPower = 30,
+			attackPower = 30,
+			defensePower = 30,
+			type = listOf("Grass", "Poison"),
+			weaknesses = listOf("Fire", "Ice", "Psychic")
+		),
+
 	)
 }
