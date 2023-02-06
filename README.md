@@ -11,7 +11,7 @@ learn about a new Gen I Pokemon each day for over 30 days!
 
 ## 📝 Disclaimer
 I do not own the brand name "Pokemon" or the characters seen in this app.  
-I only created this for fun and learning purposes, see their ![official website](https://www.pokemon.com) for more
+I only created this for fun and learning purposes, see their [official website](https://www.pokemon.com) for more
 
 ## Credits
 Developer: **Dev Xero**  
