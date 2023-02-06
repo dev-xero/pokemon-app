@@ -25,6 +25,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import dev.xero.pokemon.data.PokemonData
 import dev.xero.pokemon.models.MapOfTypeToColor
 import dev.xero.pokemon.models.Pokemon
@@ -33,6 +34,7 @@ import dev.xero.pokemon.ui.theme.*
 class MainActivity : ComponentActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
+		installSplashScreen()
 		setContent {
 			PokemonTheme {
 				Surface(color = black) {
