@@ -109,7 +109,7 @@ fun AppBar(
 			Column(
 				modifier = Modifier.padding(
 					horizontal = 12.dp,
-					vertical = 32.dp
+					vertical = 20.dp
 				)
 			) {
 				Text(
@@ -120,7 +120,7 @@ fun AppBar(
 
 				Text(
 					text = stringResource(id = R.string.title_second),
-					style = MaterialTheme.typography.h2,
+					style = MaterialTheme.typography.subtitle2,
 					color = white
 				)
 			}
