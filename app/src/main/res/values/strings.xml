@@ -31,6 +31,20 @@
     <string name="kakuna">Kakuna</string>
     <string name="beedrill">Beedrill</string>
     <string name="pidgey">Pidgey</string>
+    <string name="pidgeotto">Pidgeotto</string>
+    <string name="pidgeot">Pidgeot</string>
+    <string name="rattata">Rattata</string>
+    <string name="raticate">Raticate</string>
+    <string name="spearow">Spearow</string>
+    <string name="fearow">Fearow</string>
+    <string name="ekans">Ekans</string>
+    <string name="arbok">Arbok</string>
+    <string name="pikachu">Pikachu</string>
+    <string name="raichu">Raichu</string>
+    <string name="sandshrew">Sandshrew</string>
+    <string name="sandslash">Sandslash</string>
+    <string name="nidoran">Nidoran</string>
+    <string name="nidorina">Nidorina</string>
 
     <!-- POKEMON DESCRIPTIONS -->
     <string name="bulbasaur_description">
@@ -96,5 +110,61 @@
     <string name="pidgey_description">
         Very docile. If attacked, it will often kick up sand to
         protect itself rather than fight back.
+    </string>
+    <string name="pidgeotto_description">
+        This Pokémon is full of vitality. It constantly flies around
+        its large territory in search of prey.
+    </string>
+    <string name="pidgeot_description">
+        This Pokémon flies at Mach 2 speed, seeking prey.
+        Its large talons are feared as wicked weapons.
+    </string>
+    <string name="rattata_description">
+        Will chew on anything with its fangs. If you see one,
+        you can be certain that 40 more live in the area.
+    </string>
+    <string name="raticate_description">
+        Its hind feet are webbed. They act as flippers,
+        so it can swim in rivers and hunt for prey.
+    </string>
+    <string name="spearow_description">
+        Inept at flying high. However, it can fly
+        around very fast to protect its territory.
+    </string>
+    <string name="fearow_description">
+        A Pokémon that dates back many years. If it senses
+        danger, it flies high and away, instantly.
+    </string>
+    <string name="ekans_description">
+        The older it gets, the longer it grows. At night,
+        it wraps its long body around tree branches to rest.
+    </string>
+    <string name="arbok_description">
+        The frightening patterns on its belly have been studied.
+        Six variations have been confirmed.
+    </string>
+    <string name="pikachu_description">
+        When it is angered, it immediately discharges the energy
+        stored in the pouches in its cheeks.
+    </string>
+    <string name="raichu_description">
+        Its tail discharges electricity into the ground, protecting
+        it from getting shocked.
+    </string>
+    <string name="sandshrew_description">
+        It loves to bathe in the grit of dry, sandy areas. By sand bathing,
+        the Pokémon rids itself of dirt and moisture clinging to its body.
+    </string>
+    <string name="sandslash_description">
+        The drier the area Sandslash lives in, the harder and smoother the
+        Pokémon’s spikes will feel when touched.
+    </string>
+    <string name="nidoran_description">
+        Females are more sensitive to smells than males. While foraging,
+        they’ll use their whiskers to check wind direction and stay downwind of predators.
+    </string>
+    <string name="nidorina_description">
+        The horn on its head has atrophied. It’s thought that this happens so Nidorina’s
+        children won’t get poked while their mother is feeding them.
     </string>
 </resources>
