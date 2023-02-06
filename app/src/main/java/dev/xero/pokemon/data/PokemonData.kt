@@ -152,5 +152,53 @@ class PokemonData {
 			weaknesses = listOf("Fire", "Rock", "Electric")
 		),
 
+		Pokemon(
+			number = 13,
+			imageResID = R.drawable.weedle,
+			nameResID = R.string.weedle,
+			descriptionResID = R.string.weedle_description,
+			healthPower = 20,
+			attackPower = 20,
+			defensePower = 15,
+			type = listOf("Bug", "Poison"),
+			weaknesses = listOf("Fire", "Rock", "Psychic")
+		),
+
+		Pokemon(
+			number = 14,
+			imageResID = R.drawable.kakuna,
+			nameResID = R.string.kakuna,
+			descriptionResID = R.string.kakuna_description,
+			healthPower = 20,
+			attackPower = 15,
+			defensePower = 20,
+			type = listOf("Bug", "Poison"),
+			weaknesses = listOf("Fire", "Rock", "Psychic")
+		),
+
+		Pokemon(
+			number = 15,
+			imageResID = R.drawable.beedrill,
+			nameResID = R.string.beedrill,
+			descriptionResID = R.string.beedrill_description,
+			healthPower = 25,
+			attackPower = 40,
+			defensePower = 20,
+			type = listOf("Bug", "Poison"),
+			weaknesses = listOf("Fire", "Psychic", "Rock")
+		),
+
+		Pokemon(
+			number = 16,
+			imageResID = R.drawable.pidgey,
+			nameResID = R.string.pidgey,
+			descriptionResID = R.string.pidgey_description,
+			healthPower = 20,
+			attackPower = 20,
+			defensePower = 20,
+			type = listOf("Normal"),
+			weaknesses = listOf("Electric", "Ice", "Rock")
+		),
+
 	)
 }

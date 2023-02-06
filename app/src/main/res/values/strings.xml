@@ -27,6 +27,10 @@
     <string name="caterpie">Caterpie</string>
     <string name="metapod">Metapod</string>
     <string name="butterfree">Butterfree</string>
+    <string name="weedle">Weedle</string>
+    <string name="kakuna">Kakuna</string>
+    <string name="beedrill">Beedrill</string>
+    <string name="pidgey">Pidgey</string>
 
     <!-- POKEMON DESCRIPTIONS -->
     <string name="bulbasaur_description">
@@ -74,6 +78,23 @@
         it can only harden, so it remains motionless to avoid attack.
     </string>
     <string name="butterfree_description">
-        In battle, it flaps its wings at great speed to release highly toxic dust into the air.
+        In battle, it flaps its wings at great speed to release highly
+        toxic dust into the air.
+    </string>
+    <string name="weedle_description">
+        Beware of the sharp stinger on its head. It hides in grass
+        and bushes where it eats leaves.
+    </string>
+    <string name="kakuna_description">
+        Able to move only slightly. When endangered, it may stick
+        out its stinger and poison its enemy.
+    </string>
+    <string name="beedrill_description">
+        It has three poisonous stingers on its forelegs and its tail.
+        They are used to jab its enemy repeatedly.
+    </string>
+    <string name="pidgey_description">
+        Very docile. If attacked, it will often kick up sand to
+        protect itself rather than fight back.
     </string>
 </resources>
