@@ -35,7 +35,9 @@ class MainActivity : ComponentActivity() {
 		super.onCreate(savedInstanceState)
 		setContent {
 			PokemonTheme {
-				PokemonApp()
+				Surface(color = black) {
+					PokemonApp()
+				}
 			}
 		}
 	}
@@ -355,7 +357,7 @@ private fun ProgressUI(
 
 	LinearProgressIndicator(
 		color = barColor,
-		backgroundColor = Color(0xFF151518),
+		backgroundColor = Color(0xFF25252B),
 		progress = progressAnimation,
 		modifier = Modifier
 			.fillMaxWidth()
