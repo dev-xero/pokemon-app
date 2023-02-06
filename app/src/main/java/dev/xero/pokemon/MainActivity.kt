@@ -54,11 +54,14 @@ fun PokemonApp(
 	modifier: Modifier = Modifier
 ) {
 	Scaffold(
-		topBar = { AppBar() }
+		topBar = { AppBar() },
+		modifier = modifier.padding(bottom = 12.dp)
 	) {
 		padding ->
 		LazyColumn(
-			modifier = Modifier.padding(padding),
+			modifier = Modifier
+				.padding(padding)
+				.background(color = black),
 			verticalArrangement = Arrangement.spacedBy(12.dp)
 		) {
 			items(PokemonData().pokemonData) {
@@ -361,7 +364,7 @@ private fun ProgressUI(
 		color = barColor,
 		backgroundColor = Color(0xFF25252B),
 		progress = progressAnimation,
-		modifier = Modifier
+		modifier = modifier
 			.fillMaxWidth()
 	)
 }
