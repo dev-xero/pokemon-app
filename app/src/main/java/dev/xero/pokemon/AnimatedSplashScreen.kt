@@ -33,6 +33,7 @@ fun AnimatedSplashScreen(navHostController: NavHostController) {
 	LaunchedEffect(key1 = true) {
 		startAnimation = true
 		delay(3000)
+		navHostController.popBackStack()
 		navHostController.navigate(Screen.Home.route)
 	}
 	Splash(alpha = alphaAnim.value)
