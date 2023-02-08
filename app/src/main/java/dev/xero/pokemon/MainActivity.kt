@@ -467,8 +467,8 @@ fun TypeBox(
  * */
 @Preview
 @Composable
-private fun PokemonPreview() {
+private fun PokemonAppPreview() {
 	PokemonTheme {
-		PokemonItem(pokemon = PokemonData().pokemonData[0])
+		PokemonApp()
 	}
 }
