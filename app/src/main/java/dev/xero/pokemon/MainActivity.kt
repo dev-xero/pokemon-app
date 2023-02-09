@@ -13,6 +13,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -143,7 +144,7 @@ fun PokemonItem(
 			.padding(horizontal = 12.dp),
 		elevation = 0.dp
 	) {
-		var expanded by remember { mutableStateOf(false) }
+		var expanded by rememberSaveable { mutableStateOf(false) }
 
 		Column(
 			modifier = Modifier
@@ -186,7 +187,7 @@ fun PokemonItem(
 				modifier = Modifier
 					.padding(top = 8.dp)
 			) {
-				var lineHeight by remember { mutableStateOf(2) }
+				var lineHeight by rememberSaveable { mutableStateOf(2) }
 				Row(
 					modifier = Modifier
 						.fillMaxWidth(),
