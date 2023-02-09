@@ -281,12 +281,14 @@ fun PokemonStats(
 				Text(
 					text = stringResource(id = R.string.hp),
 					style = MaterialTheme.typography.h5,
-					color = inactive
+					color = inactive,
+					modifier = Modifier.width(20.dp)
 				)
 				Text(
 					text = stringResource(id = R.string.stats_percentage, pokemon.healthPower),
 					style = MaterialTheme.typography.h5,
-					color = accent_1
+					color = accent_1,
+					modifier = Modifier.width(30.dp)
 				)
 				ProgressUI(UI = "HP", pokemon = pokemon)
 			}
@@ -301,12 +303,14 @@ fun PokemonStats(
 				Text(
 					text = stringResource(id = R.string.ap),
 					style = MaterialTheme.typography.h5,
-					color = inactive
+					color = inactive,
+					modifier = Modifier.width(20.dp)
 				)
 				Text(
 					text = stringResource(id = R.string.stats_percentage, pokemon.attackPower),
 					style = MaterialTheme.typography.h5,
-					color = accent_1
+					color = accent_1,
+					modifier = Modifier.width(30.dp)
 				)
 				ProgressUI(UI = "AP", pokemon = pokemon)
 			}
@@ -321,12 +325,14 @@ fun PokemonStats(
 				Text(
 					text = stringResource(id = R.string.df),
 					style = MaterialTheme.typography.h5,
-					color = inactive
+					color = inactive,
+					modifier = Modifier.width(20.dp)
 				)
 				Text(
 					text = stringResource(id = R.string.stats_percentage, pokemon.defensePower),
 					style = MaterialTheme.typography.h5,
-					color = accent_3
+					color = accent_3,
+					modifier = Modifier.width(30.dp)
 				)
 				ProgressUI(UI = "DF", pokemon = pokemon)
 			}
