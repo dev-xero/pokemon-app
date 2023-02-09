@@ -1,6 +1,6 @@
 # <img src="https://user-images.githubusercontent.com/70282966/216826748-21810517-124f-4d5a-918c-fdf05e3fadc1.svg" width="32px"> <span>Pokemon App</span>
 A Pokemon app showing you info on over 20 Gen I Pokemons,  
-learn about a new Gen I Pokemon each day for over 30 days!
+learn about a new Gen I Pokemon daily for 30 days!
 
 ## App
 <div style="display: flex">
